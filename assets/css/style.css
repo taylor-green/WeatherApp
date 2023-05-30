@@ -1,0 +1,20 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page Header */
+h1 {
+    font-size: 2.5rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-weight: bold;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom right, #010812, #3bb1f6);
+    color: #fff;
+    justify-content: center;
+    height: 100px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+  }
