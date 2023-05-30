@@ -111,7 +111,7 @@ function renderSearchHistory() {
     setActiveHistoryItem(searchHistoryList.firstChild);
   }
   
-  // Set active class on search history item
+  // Set active class on search history 
 function setActiveHistoryItem(item) {
     const activeItem = document.querySelector('.search-history-item.active');
     if (activeItem) {
@@ -121,7 +121,7 @@ function setActiveHistoryItem(item) {
     item.classList.add('active');
 }
 
-// Listen for click event on search history items
+// Listen for click event on search history 
 searchHistory.addEventListener('click', e => {
     if (e.target.classList.contains('search-history-item')) {
         city = e.target.textContent;
@@ -130,3 +130,30 @@ searchHistory.addEventListener('click', e => {
         setActiveHistoryItem(e.target);
     }
 });
+
+
+// Update UI and save search history on form submit
+searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+    city = cityInput.value.trim();
+
+    if (city) {
+        // Save search history to localStorage
+        history.push(city);
+        localStorage.setItem('history', JSON.stringify(history));
+
+        // Update UI
+        renderCurrentWeather();
+        renderForecast();
+        renderSearchHistory();
+    }
+
+    // Reset form
+    searchForm.reset();
+});
+
+// Load search history from localStorage
+if (localStorage.getItem('history')) {
+    history = JSON.parse(localStorage.getItem('history'));
+    renderSearchHistory();
+}
