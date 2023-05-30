@@ -97,3 +97,17 @@ async function renderForecast() {
         console.error(error);
     }
 }
+// Render search history
+function renderSearchHistory() {
+    const searchHistoryList = document.querySelector('#search-history-list');
+    searchHistoryList.innerHTML = '';
+    history
+        // Get the last 5 unique items in the history array
+        .filter((item, index, self) => self.lastIndexOf(item) === index)
+        .slice(-5)
+        .forEach(item => {
+            searchHistoryList.innerHTML += `<li class="search-history-item">${item}</li>`;
+        });
+    setActiveHistoryItem(searchHistoryList.firstChild);
+  }
+  
