@@ -67,3 +67,30 @@ h1 {
     font-size: 2.5rem;
     font-weight: bold;
   }
+
+  /* Style the forecast section */
+#forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+  
+  /* Style the forecast card */
+  .forecast-card {
+    flex-basis: calc(20% - 1rem);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #031b28;
+    color: #fff;
+    border-radius: 0.25rem;
+  }
+  
+  
+  /* Style the date in the forecast card */
+  .forecast-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
