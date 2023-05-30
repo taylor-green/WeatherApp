@@ -111,3 +111,22 @@ function renderSearchHistory() {
     setActiveHistoryItem(searchHistoryList.firstChild);
   }
   
+  // Set active class on search history item
+function setActiveHistoryItem(item) {
+    const activeItem = document.querySelector('.search-history-item.active');
+    if (activeItem) {
+        activeItem.classList.remove('active');
+    }
+
+    item.classList.add('active');
+}
+
+// Listen for click event on search history items
+searchHistory.addEventListener('click', e => {
+    if (e.target.classList.contains('search-history-item')) {
+        city = e.target.textContent;
+        renderCurrentWeather();
+        renderForecast();
+        setActiveHistoryItem(e.target);
+    }
+});
