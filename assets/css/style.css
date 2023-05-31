@@ -26,12 +26,16 @@ h1 {
     align-items: center;
     margin: 25px;
     padding: 25px;
+    
+    
   }
   
   /* city input field */
   #city-input {
     flex: 1;
     margin-right: 1rem;
+    border-radius: 5px;
+    
   }
   
   /* current weather section */
