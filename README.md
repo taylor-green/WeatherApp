@@ -10,4 +10,12 @@ I utilized VS Code to build this project. Other technologies used were JavaScrip
 
 ## Features
 This application features a search bar when the user first visits the page. 
+![initial-load-up](https://github.com/taylor-green/WeatherApp/assets/121259035/cb6b401b-91d3-49ca-8996-fd8592968e41)
+
+The user can then type a city in the search bar and search the forecast for that city.
+![first-search](https://github.com/taylor-green/WeatherApp/assets/121259035/8bfe7653-0ecd-4610-b375-f34a093fa257)
+
+Finally, local storage saves the users recent searches to be revisted later.
+![local-storage](https://github.com/taylor-green/WeatherApp/assets/121259035/527a5e60-f14d-4efe-810f-89bb022148dd)
+
 
